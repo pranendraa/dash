@@ -19,10 +19,10 @@
       }
 
       /* Atur ukuran video agar sesuai dengan ukuran kontainer */
-      video {
+      /* video {
         width: 854px;
         height: 480px;
-      }
+      } */
 
       /* Ukuran video default */
       /* #videoPlayer video {
@@ -32,21 +32,21 @@
 
       /* resize update */
       /* Ukuran video untuk layar lebar (di atas 1024px) */
-      /* @media screen and (min-width: 1024px) {
-        #videoPlayer video {
-          width: 920px;
-          height: 518.75px;
+      @media screen and (min-width: 1024px) {
+        video {
+          width: 854px;
+          height: 480px;
         }
-      } */
+      }
       
 
       /* Ukuran video untuk layar sempit (di bawah 1024px) */
-      /* @media screen and (max-width: 1024px) {
-        #videoPlayer video {
+      @media screen and (max-width: 1024px) {
+        video {
           width: 100%;
           height: auto;
         }
-      } */
+      }
 
       /* Tampilan fullscreen video */
       /* #videoPlayer.videoPlayer-fullscreen video {
@@ -306,24 +306,6 @@
         dp.container.classList.remove('videoPlayer-fullscreen');
       });
 
-      // Deteksi saat video memasuki mode web-fullscreen
-      dp.on('webfullscreen', function () {
-        // Tambahkan kelas CSS untuk menampilkan video player di tengah
-        dp.container.classList.add('videoPlayer-web-fullscreen');
-      });
-
-      // Deteksi saat video keluar dari mode web-fullscreen
-      dp.on('webfullscreen_cancel', function () {
-        // Hapus kelas CSS untuk menampilkan video player di tengah
-        dp.container.classList.remove('videoPlayer-web-fullscreen');
-      });
-
-//       dp.on('fullscreen', () => {
-//         if (document.webkitFullscreenElement) {
-//           document.webkitFullscreenElement.setAttribute('playsinline', '');
-//           document.webkitFullscreenElement.webkitEnterFullScreen();
-//         }
-//       });
     </script>
   </body>
 </html>
