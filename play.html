@@ -292,7 +292,7 @@
 
       var player = dashjs.MediaPlayer().create();
       player.initialize(document.querySelector("#videoPlayer"), url, true);
-      player.updateSetting(config);
+      player.updateSettings(config);
 
       // Deteksi saat video memasuki fullscreen
       dp.on('fullscreen', function () {
