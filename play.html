@@ -82,8 +82,7 @@
       <div id="dplayer"></div>
       
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>    
+   
     <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
     <script>
@@ -98,19 +97,14 @@
         preventClickToggle: true,
         video: {
           url: decodeURIComponent(videoUrl),
-          type: 'auto'
+          type: 'dash'
         },
-        hls: true,
-        dash: true,
         xhrSetup: {
           headers: {
             'Referer': 'https://dplayer.js.org/'
           }
         },
         pluginOptions: {
-          hls: {
-            enable: true
-          },
           dash: {
             enable: true
           }
