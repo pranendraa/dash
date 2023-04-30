@@ -33,7 +33,6 @@
         }
       }
       
-
       /* Ukuran video untuk layar sempit (di bawah 1024px) */
       @media screen and (max-width: 1024px) {
         video {
@@ -41,16 +40,6 @@
           height: auto;
         }
       }
-
-      /* Tampilan fullscreen video */
-      /* #videoPlayer.videoPlayer-fullscreen video {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        z-index: 9999;
-      } */
 
     </style>
   </head>
@@ -281,18 +270,6 @@
       var player = dashjs.MediaPlayer().create();
       player.initialize(document.querySelector("#videoPlayer"), url, true);
       player.updateSettings(config);
-
-      // Deteksi saat video memasuki fullscreen
-      dp.on('fullscreen', function () {
-        // Tambahkan class CSS untuk tampilan fullscreen video
-        dp.container.classList.add('videoPlayer-fullscreen');
-      });
-
-      // Deteksi saat video keluar dari fullscreen
-      dp.on('fullscreen_cancel', function () {
-        // Hapus class CSS untuk tampilan fullscreen video
-        dp.container.classList.remove('videoPlayer-fullscreen');
-      });
 
     </script>
   </body>
